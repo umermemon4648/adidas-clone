@@ -1,9 +1,18 @@
+@font-face {
+  font-family: 'URW DIN',
+  "helvetica"
+  "arial"
+  "sans-serif";
+  src: url('../font/URWDIN-Light.ttf');
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body{
   background-color: #121212;
+  font-family: 'URW DIN';
 }
 .parentElement  {
 /* background-color: rebeccapurple; */
@@ -19,6 +28,19 @@ color: black; */
   display: block;
 } */
 
-.active-dropdown{
+/* .menu:hover .active-dropdown{
 display: block;
+} */
+
+.dropdown-menu.active{
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+
+.dropdown-menu.inactive{
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  
 }

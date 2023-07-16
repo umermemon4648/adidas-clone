@@ -1,5 +1,5 @@
 "use client"
-import React, {useRef, useState} from 'react'
+import React, {useRef, useState, useEffect} from 'react'
 import Image from 'next/image'
 
 
@@ -44,7 +44,7 @@ const dropDownData = [
 const Navbar = () => {
     const dropdownRef = useRef()
     const buttonRef = useRef()
-    const [isDropdownOpen, setDropdownOpen] = useState(false);
+    const [isOpen, setOpen] = useState(false);
 
   // const handleButtonEnter = () => {
   //   setDropdownOpen(true);
@@ -65,35 +65,27 @@ const Navbar = () => {
     //     // dropdownRef.current.style.display = 'none'
     //     // dropdownRef.current.style.backgroundColor = 'pink'
     // }
-    const handler = ()=>{
-      if(dropdownRef.current.classList.contains('hidden')){
-        dropdownRef.current.classList.remove('hidden')
-        dropdownRef.current.classList.add('active-dropdown')
-        buttonRef.current.style.backgroundColor='white'
-        buttonRef.current.style.color='black'
-      }
-    }
+    // const handler = ()=>{
+    //   if(dropdownRef.current.classList.contains('hidden')){
+    //     dropdownRef.current.classList.remove('hidden')
+    //     dropdownRef.current.classList.add('active-dropdown')
+    //     buttonRef.current.style.backgroundColor='white'
+    //     buttonRef.current.style.color='black'
+    //   }
+    // }
 
-    const handleButtonLeave = ()=>{
-      if(dropdownRef.current.classList.contains('active-dropdown')){
-        dropdownRef.current.classList.remove('active-dropdown')
-        dropdownRef.current.classList.add('hidden')
-        buttonRef.current.style.backgroundColor='inherit'
-        buttonRef.current.style.color='white'
-      }
-    }
+    // const handleButtonLeave = ()=>{
+    //   if(dropdownRef.current.classList.contains('active-dropdown')){
+    //     dropdownRef.current.classList.remove('active-dropdown')
+    //     dropdownRef.current.classList.add('hidden')
+    //     buttonRef.current.style.backgroundColor='inherit'
+    //     buttonRef.current.style.color='white'
+    //   }
+    // }
     
-//     useEffect(()=>{
-// if(dropdownRef.current.style.display==='block'){
-//   alert("block")
-//   buttonRef.current.style.backgroundColor='white'
-//   buttonRef.current.style.color='black'
-// }
-// else{
-//   buttonRef.current.style.backgroundColor='black'
-//   buttonRef.current.style.color='white'
-// }
-//     },[dropdownRef.current])
+    useEffect(()=>{
+
+    },[isOpen])
 
 
   return (
@@ -110,17 +102,21 @@ const Navbar = () => {
       </div>
       {/* ${isDropdownOpen ? 'bg-white' : 'bg-pink-500'} */}
       <div 
-      onMouseEnter={handler}
-      onMouseLeave={handleButtonLeave}
-       className="menu  flex relative">
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+      // onMouseLeave={() => setOpen(false)}
+      // onClick={() => setOpen(!isOpen)}
+       className="menu  flex relative bg-pink-600"
+       >
+       
         <button 
-        ref={buttonRef} 
+        // ref={buttonRef} 
      className={`btn uppercase relative border-[1px] border-white px-8 py-2 text-white`}
         // onMouseEnter={handleButtonEnter}
         // onMouseLeave={handleButtonLeave}
         >shop the collection</button>
-         <ul className={`hidden dropdown-menu text-white absolute uppercase w-full top-[40px] border`}
-         ref={dropdownRef}
+         <ul className={`dropdown-menu ${isOpen?'active':'inactive'} text-white absolute uppercase w-full top-[40px] border`}
+        //  ref={dropdownRef}
          >
             {dropDownData.map((list,index)=>(
                 <a href="#">
@@ -128,7 +124,7 @@ const Navbar = () => {
                 {/* border-b-[#e40000] */} 
                 <li style={{
         borderBottom: index !== dropDownData.length - 1 ? '0.1px solid #6b6b6b' : ''
-      }}  className=' px-4 text-xs py-2 hover:text-[#A5A5A5]' key={index}>{list.title}</li>
+      }}  className=' px-4 text-xs py-2 hover:text-[#A5A5A5] hover:pr-2' key={index}>{list.title}</li>
                 </a>
             ))}
           
