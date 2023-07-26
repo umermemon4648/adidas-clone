@@ -1,0 +1,11 @@
+Model Information:
+* title:	Jacket (Final)
+* source:	https://sketchfab.com/3d-models/jacket-final-73237e73f8c34eaab22194b4c594df34
+* author:	Mika060011 (https://sketchfab.com/CMenaTabuada)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Jacket (Final)" (https://sketchfab.com/3d-models/jacket-final-73237e73f8c34eaab22194b4c594df34) by Mika060011 (https://sketchfab.com/CMenaTabuada) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

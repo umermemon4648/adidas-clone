@@ -1,0 +1,11 @@
+Model Information:
+* title:	Adidas Jacket
+* source:	https://sketchfab.com/3d-models/adidas-jacket-2f69634f33ee4173beba410a673da22c
+* author:	Ryan Maduro (https://sketchfab.com/rmaduro)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Adidas Jacket" (https://sketchfab.com/3d-models/adidas-jacket-2f69634f33ee4173beba410a673da22c) by Ryan Maduro (https://sketchfab.com/rmaduro) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
