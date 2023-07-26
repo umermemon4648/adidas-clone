@@ -74,6 +74,7 @@ const Navbar = () => {
       alt="Picture of the author"
       className=''
       />
+
       </div>
 
 
@@ -119,6 +120,7 @@ const Navbar = () => {
         </ul>
       )}
     </div>
+
 
 
 
