@@ -15,16 +15,16 @@ const geometry = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0, 
 const Hero = () => {
   return (
     <>
-    {/* <Canvas>
+    <Canvas>
 <mesh>
-    <boxGeometry args={[5,5,5]}/>
+    <boxGeometry args={[1.5,150,5]}/>
     <meshBasicMaterial color={'red'}/>
 </mesh>
-    </Canvas> */}
-<Canvas>
+    </Canvas>
+{/* <Canvas> */}
 {/* <line key={i} geometry={geometry} material={material} position={[i * 0.06 - urls.length * 0.03, -height / 2 + 0.6, 0]} /> */}
-<line geometry={geometry} material={material} position={[1 * 6, 6, 10]} />
-</Canvas>
+{/* <line geometry={geometry} material={material} position={[1 * 6, 6, 10]} /> */}
+{/* </Canvas> */}
     </>
   )
 }

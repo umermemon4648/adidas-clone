@@ -1,3 +1,9 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: 'URW DIN',
   "helvetica"
@@ -6,41 +12,19 @@
   src: url('../font/URWDIN-Light.ttf');
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 body{
   background-color: #121212;
   font-family: 'URW DIN';
 }
-.parentElement  {
-/* background-color: rebeccapurple; */
-}
-/* .parentElement :not(:last-child) {
-  border-bottom: 1px solid silver;
-  border-bottom: 1px solid red;
-} */
 
-/* background-color: white;
-color: black; */
-/* .menu:hover .dropdown-menu{
-  display: block;
-} */
-
-/* .menu:hover .active-dropdown{
-display: block;
-} */
-
-.dropdown-menu.active{
-opacity: 1;
-visibility: visible;
-transform: translateY(0);
-}
-
-.dropdown-menu.inactive{
-  opacity: 0;
-  visibility: hidden;
+/* .dropdown-menu{
+  z-index: 1;
   transform: translateY(-10px);
-  
+  transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
 }
+.menu:hover .dropdown-menu{
+  z-index: -2;
+  transform: translateY(0%);
+  transition-delay: 0s, 0s, 0.3s; 
+} */
