@@ -63,7 +63,8 @@ const Navbar = () => {
 
 
   return (
-    <div className='text-black mt-12 px-12 flex justify-between items-center'>
+    <>
+    <div className='text-black mt-8 px-12 flex justify-between items-center'>
         <div>
 
     <Image
@@ -84,8 +85,11 @@ const Navbar = () => {
         onMouseLeave={handleMouseLeave}
         // onTouchStart={handleTouchStart}
         className={`btn uppercase border-[1px] h-10 px-8 py-2 ${
-          isDropdownOpen ? "bg-white text-black" : "bg-black text-white"
+          isDropdownOpen ? "bg-white text-black border-none" : "bg-black text-white"
         }`}
+        style={{
+          transition: 'background-color 0.3s ease',
+        }}
       >
         shop the collection
       </button>
@@ -96,15 +100,17 @@ const Navbar = () => {
           onMouseLeave={handleMouseLeave}
           className={`absolute text-white uppercase w-full h-auto top-[40px] border`}
           style={{ width: buttonRef.current.clientWidth }}
+        
         >
           {dropDownData.map((item) => (
             <a href="#" className="" key={item.id}>
               <li
                 style={{
+                  transform: isDropdownOpen ? 'translateX(0)' : 'translateX(20px)',
                   borderBottom:
                     item.id !== dropDownData.length ? "0.1px solid #6b6b6b" : "",
                 }}
-                className="cursor-pointer item px-4 text-xs py-2 hover:text-[#A5A5A5]"
+                className="cursor-pointer item px-4 text-xs py-2 hover:text-[#A5A5A5] "
               >
                 {item.title}
               </li>
@@ -118,6 +124,7 @@ const Navbar = () => {
 
 
     </div>
+    </>
   )
 }
 
